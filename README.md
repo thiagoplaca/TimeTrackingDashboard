@@ -11,7 +11,7 @@ This is a solution to the [Time tracking dashboard challenge on Frontend Mentor]
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
 - [Author](#author)
-)
+
 
 
 ## Overview
