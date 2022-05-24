@@ -1,0 +1,307 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+}
+
+body {
+    background-color: hsl(226, 43%, 10%);
+}
+
+.container {
+    width: 88%;
+    margin: 2rem auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 1.5rem;
+}
+
+.menu-card {
+    background-color: hsl(235, 46%, 20%);
+    border-radius: 1.6rem;
+    width: 100%;
+}
+
+.card-report {
+    background-color: hsl(246, 80%, 60%);
+    border-radius: 1.6rem;
+    padding: 2rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.9rem;
+
+}
+
+img {
+    width: 26%;
+    border: 3px solid white;
+    border-radius: 50%;  
+    max-width: 130px ;
+}
+
+p {
+    color: hsl(236, 100%, 87%);
+    font-size: 0.9rem;
+}
+
+.name {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem;
+}
+
+.menu-link {
+    color: hsl(235, 45%, 61%);
+    font-size: 1.2rem;
+    cursor: pointer; 
+}
+
+.menu-link:hover {
+    color: white;
+}
+
+.regular-card {
+    width: 100%;
+    border-radius: 1.6rem;
+    
+    background-repeat: no-repeat;
+    background-position: 95% -1rem;
+
+}
+
+.property-cards{
+    position: relative;
+    background-color: hsl(235, 46%, 20%);
+    margin-top: 2.3rem;
+    padding: 1.3rem;
+    border-radius: 1.4rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+
+}
+
+.property-cards:hover {
+    background-color: hsl(236, 41%, 34%);
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.title {
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 500;
+    z-index: 98;
+}
+
+.points {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.point::before {
+    content: '';
+    background-color: pink;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 1.6rem;
+    display: none;
+    z-index: 1;
+    
+}
+
+.point:hover::before {
+    background-color: hsl(235, 46%, 20%);
+    display: block;
+}
+
+.point {
+    background-color: hsl(236, 100%, 87%);
+    width: 0.4rem;
+    height: 0.4rem;
+    border-radius: 50%;
+    margin: 0.2rem;
+    cursor: pointer;
+    z-index: 99;
+}
+
+.point:hover {
+    background-color: white;
+}
+
+.row-2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    z-index: 97;
+}
+.hours {
+    color: white;
+    font-size: 2rem;
+    font-weight: 100;
+}
+
+.description {
+    color: hsl(236, 100%, 87%);
+
+}
+
+.work {
+    background-color: hsl(15, 100%, 70%);
+    background-image: url(../meuProjeto/images/icon-work.svg);
+}
+
+.play {
+    background-color: hsl(195, 74%, 62%);
+    background-image: url(../meuProjeto/images/icon-play.svg);
+}
+
+.study {
+    background-color: hsl(348, 100%, 68%);
+    background-image: url(../meuProjeto/images/icon-study.svg);
+}
+
+.exercise {
+    background-color: hsl(145, 58%, 55%);
+    background-image: url(../meuProjeto/images/icon-exercise.svg);
+}
+
+.social {
+    background-color: hsl(264, 64%, 52%);
+    background-image: url(../meuProjeto/images/icon-social.svg);
+}
+.selfcare {
+    background-color: hsl(43, 84%, 65%);
+    background-image: url(../meuProjeto/images/icon-self-care.svg);
+}
+
+@media screen and (min-width: 570px) {
+    .container{
+        display: grid;
+        grid-template-columns: 48% 48%;
+    }
+
+    .menu-card {
+        grid-column: 1 / span 2;
+    }
+
+    .card-report {
+        gap: 1rem;
+    }
+
+    .row-2 {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .hours {
+        font-size: 3rem;
+    }
+ }
+
+ @media screen and (min-width: 960px) {
+
+    .container {
+        display: grid;
+        grid-template-columns: 31% 31% 31%;
+    }
+
+    .menu-card {
+        grid-column: 1 / span 3;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+    }
+
+    .container {
+        width: 77%;
+
+        grid-template-columns: 23% 23% 23% 23%;
+        gap: 3rem;
+    }
+
+    .menu-card {
+        grid-row: 1 / span 2;
+        grid-column: unset;
+        height: 100%;
+
+    }
+
+    .card-report {
+        flex-direction: column;
+        align-items: flex-start;
+        height: 70%;
+        padding: 3rem 3rem;
+    }
+
+    img {
+        width: 5rem;
+    }
+
+    .report {
+        margin-top: 1.5rem;
+    }
+
+    .name {
+        font-size: 2.5rem;
+    }
+
+    .menu {
+        height: 30%;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .property-cards {
+        margin-top: 2.5rem;
+        padding: 1.5rem;
+    }
+
+    .hours {
+        padding-top: 1rem;
+    }
+
+    .description {
+        padding-top: 0.8rem;
+    }
+
+
+
+
+
+
+}
